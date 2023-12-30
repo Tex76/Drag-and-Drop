@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>third</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="fixed-box">
+    <div class="drop-area" #dropZone>
+      Items: {{ dropArea | json }}
+    </div>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of myArray">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="resetChanges()">
+    Rest Changes
+  </ion-button>
+  <ion-button expand="block" (click)="undo()">
+    Undo
+  </ion-button>
+</ion-content>

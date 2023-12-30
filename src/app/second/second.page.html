@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>second</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+   <div slot="fixed" class="fixed-box">
+       <div class="drop-area" #dropzoneA>
+         Zone A {{ teamA | json }}
+       </div>
+       <div class="drop-area" #dropzoneB>
+        Zone B {{ teamB | json }}
+       </div>
+    </div>
+    <div class="item-group">
+      <ion-item *ngFor="let item of myArray" >
+        {{item}}
+      </ion-item>
+    </div>
+      
+    
+</ion-content>
